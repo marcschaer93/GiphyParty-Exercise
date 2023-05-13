@@ -1,9 +1,6 @@
-const submitBtn = document.querySelector("#submitBtn");
-const removeBtn = document.querySelector("#removeBtn");
 const searchInput = document.querySelector("#searchInput");
-const form = document.querySelector("#searchForm");
-
 const giphyGallery = document.querySelector("#giphyGallery");
+const removeBtn = document.querySelector("#removeBtn");
 
 function createGif(response) {
   let searchResults = response.data.length;
@@ -17,8 +14,6 @@ function createGif(response) {
   newDiv.appendChild(newGif);
   giphyGallery.append(newDiv);
 }
-
-function searchTerm() {}
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
