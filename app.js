@@ -18,8 +18,6 @@ function createGif(response) {
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
   let searchTerm = searchInput.value;
-  console.log(searchTerm);
-  // searchInput.value = "";
 
   const response = await axios.get("http://api.giphy.com/v1/gifs/search", {
     params: {
@@ -27,7 +25,6 @@ form.addEventListener("submit", async function (e) {
       api_key: "fhOSvuZU5Sc0kU6GT0hTwkJPAoSA2KQW",
     },
   });
-  console.log(response);
   createGif(response.data);
 });
 
